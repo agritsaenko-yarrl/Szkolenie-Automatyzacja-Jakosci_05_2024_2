@@ -25,3 +25,11 @@ jobs:
       with:
         name: Html-report
         path: cypress/reports/report.html
+
+    - name: Test Report in GitHub Actions
+      uses: phoenix-actions/test-reporting@v8
+      if: always()
+      with:
+        name: Mochaawesome report
+        path: cypress/reports/report.json
+        reporter: mochawesome-json
