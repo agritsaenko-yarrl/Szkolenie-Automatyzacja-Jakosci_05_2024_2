@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('pdp1', () => {
+describe('pdp3', () => {
   beforeEach(() => {
     const random = Cypress._.random(0, 5);
 
@@ -38,8 +38,6 @@ describe('pdp1', () => {
     cy.get('[data-test="shopping-cart-badge"]')
       .should('be.visible')
       .and('contain.text', '1');
-
-    cy.wait(10000);
 
     cy.get('[data-test="remove"]').click();
 

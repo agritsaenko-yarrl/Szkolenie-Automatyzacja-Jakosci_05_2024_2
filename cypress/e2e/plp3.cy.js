@@ -1,14 +1,12 @@
 /// <reference types="cypress" />
 
-describe('plp1', () => {
+describe('plp3', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.login();
   });
 
   it('contains 6 items in list', () => {
-    cy.wait(3000);
-
     cy.get('[data-test="inventory-item"]')
       .should('have.length', 6)
       .each((listItem) => {
@@ -31,7 +29,6 @@ describe('plp1', () => {
       .then((text) => {
         cy.get('@randomItemName').click();
         cy.url().should('contain', 'inventory-item.html');
-
         cy.get('[data-test="inventory-item-name"]')
           .invoke('prop', 'innerText')
           .should('eq', text);

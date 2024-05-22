@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('pdp1', () => {
+describe('pdp2', () => {
   beforeEach(() => {
     const random = Cypress._.random(0, 5);
 
@@ -39,7 +39,7 @@ describe('pdp1', () => {
       .should('be.visible')
       .and('contain.text', '1');
 
-    cy.wait(10000);
+    cy.wait(5000);
 
     cy.get('[data-test="remove"]').click();
 

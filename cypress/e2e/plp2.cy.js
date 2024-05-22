@@ -1,14 +1,12 @@
 /// <reference types="cypress" />
 
-describe('plp1', () => {
+describe('plp2', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.login();
   });
 
   it('contains 6 items in list', () => {
-    cy.wait(3000);
-
     cy.get('[data-test="inventory-item"]')
       .should('have.length', 6)
       .each((listItem) => {
@@ -24,6 +22,9 @@ describe('plp1', () => {
 
   it('click on item leads to the pdp page', () => {
     const random = Cypress._.random(0, 5);
+
+    cy.wait(8000);
+
     cy.get('[data-test="inventory-item-name"]')
       .eq(random)
       .as('randomItemName')
