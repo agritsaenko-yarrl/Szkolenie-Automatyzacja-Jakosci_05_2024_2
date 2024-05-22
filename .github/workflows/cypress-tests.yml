@@ -19,3 +19,9 @@ jobs:
     
     - name: Run bash script
       run: bash run_tests.sh
+
+    - name: Upload Html report
+      uses: actions/upload-artifact@v4
+      with:
+        name: Html-report
+        path: cypress/reports/report.html
