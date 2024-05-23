@@ -11,6 +11,7 @@ describe('pdp1', () => {
       .eq(random)
       .click();
 
+
     cy.url().should('contain', 'inventory-item.html');
   });
 
