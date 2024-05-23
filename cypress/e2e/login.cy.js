@@ -1,6 +1,6 @@
 describe('login', () => {
   it('login successful', () => {
-    cy.visit('/');
+    cy.visit('/')
 
     cy.get('[data-test="username"]').type('standard_user');
     cy.get('[data-test="password"]').type('secret_sauce');
