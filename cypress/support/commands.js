@@ -25,11 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', (username = 'standard_user', password = 'secret_sauce') => {
-    cy.get('[data-test="username"]').type(username)
-    cy.get('[data-test="password"]').type(password)
-    cy.get('[data-test="login-button"]').click()
+    cy.get('[data-test="username"]').type(username);
+    cy.get('[data-test="password"]').type(password);
+    cy.get('[data-test="login-button"]').click();
 
     if (username === 'standard_user', password === 'secret_sauce') {
-        cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
+        cy.url().should('eq', 'https://www.saucedemo.com/inventory.html');
     }
-})
+});
