@@ -3,6 +3,6 @@ services:
     image: cypress-image
     build:
       context: ../../
-      dockerfile: .github/docker/.Dockerfile.test
+      dockerfile: .github/docker/.Dockerfile.tests
     container_name: cypress-smoke
     command: npx cypress run --spec "cypress/e2e/login.cy.js"
